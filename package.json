@@ -1,0 +1,48 @@
+{
+  "name": "sakura-script",
+  "displayName": "Sakura Script",
+  "description": "Add Sakura Script support to VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.115.0"
+  },
+  "type": "module",
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "sakura-script",
+      "aliases": ["Sakura Script", "sakura-script"],
+      "extensions": [".sksy"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sakura-script",
+      "scopeName": "source.sakura",
+      "path": "./syntaxes/sakura-script.tmLanguage.json"
+    }],
+    "snippets": [
+        {
+            "language": "sakura-script",
+            "path": "./snippets/snippets.json"
+        }
+    ],
+    "commands": [
+        {
+            "command": "sakura-script.exportJSON",
+            "title": "Sakura: Exportar guion a JSON"
+        }
+    ],
+    "menus": {
+        "editor/context": [
+            {
+                "command": "sakura-script.exportJSON",
+                "group": "navigation"
+            }
+        ]
+    }
+  }
+}

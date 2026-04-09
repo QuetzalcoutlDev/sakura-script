@@ -1,0 +1,1 @@
+# Sakura Script Extension for VS Code

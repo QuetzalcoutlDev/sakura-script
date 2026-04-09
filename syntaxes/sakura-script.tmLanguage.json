@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Sakura Script",
+	"patterns": [
+    {
+        "comment": "1. CORE: Ahora permite espacios o tabs al inicio",
+        "match": "^[\\t ]*(\\$)\\s*\\b(end|jump|set_variable)\\b",
+        "captures": {
+            "1": { "name": "keyword.other.unit.sakura" },
+            "2": { "name": "keyword.control.sakura" }
+        }
+    },
+    {
+        "comment": "2. GENÉRICO: También con soporte para indentación",
+        "match": "^[\\t ]*(\\$)\\s*([a-zA-Z_\\w]*)",
+        "captures": {
+            "1": { "name": "keyword.other.unit.sakura" },
+            "2": { "name": "entity.name.function.sakura" }
+        }
+    },
+    {
+        "comment": "3. KEYWORDS DE CONTROL",
+        "name": "keyword.control.sakura",
+        "match": "\\b(label|if|elif|else|pass|option)\\b"
+    },
+    {
+        "name": "keyword.control.sakura",
+        "match": "\\b(label|if|elif|else|pass|option)\\b"
+    },
+    {
+        "name": "variable.other.member.sakura",
+        "match": "\\[[a-zA-Z_\\w\\s]+\\]"
+    },
+    {
+        "name": "keyword.other.unit.sakura",
+        "match": "^\\s*\\$.*$"
+    },
+    {
+        "name": "string.quoted.double.sakura",
+        "begin": "\"",
+        "end": "\""
+    },
+    {
+        "name": "comment.line.double-slash.sakura",
+        "match": "//.*$"
+    }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sakurascript",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.sakurascript",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sakurascript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.sakura"
+}
