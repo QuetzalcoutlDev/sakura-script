@@ -3,7 +3,7 @@
 	"name": "Sakura Script",
 	"patterns": [
     {
-        "comment": "1. CORE: Ahora permite espacios o tabs al inicio",
+        "comment": "Comandos internos",
         "match": "^[\\t ]*(\\$)\\s*\\b(end|jump|set_variable)\\b",
         "captures": {
             "1": { "name": "keyword.other.unit.sakura" },
@@ -11,7 +11,7 @@
         }
     },
     {
-        "comment": "2. GENÉRICO: También con soporte para indentación",
+        "comment": "Comandos genericos",
         "match": "^[\\t ]*(\\$)\\s*([a-zA-Z_\\w]*)",
         "captures": {
             "1": { "name": "keyword.other.unit.sakura" },
@@ -19,7 +19,7 @@
         }
     },
     {
-        "comment": "3. KEYWORDS DE CONTROL",
+        "comment": "Control",
         "name": "keyword.control.sakura",
         "match": "\\b(label|if|elif|else|pass|option)\\b"
     },

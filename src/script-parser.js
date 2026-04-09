@@ -2,8 +2,7 @@
 // import fs from 'node:fs';
 
 /**
- * Función que por ahora, solo debe convertir un archivo .txt a JSON como formato compatible
- * para Sakura Dialog System
+ * Convertir texto sksy, en un formato JSON
  * @param {String} script Texto a cargar
  */
 export function scriptParser(script){

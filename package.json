@@ -3,9 +3,15 @@
   "displayName": "Sakura Script",
   "description": "Add Sakura Script support to VS Code",
   "version": "0.0.1",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.115.0"
   },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+
   "type": "module",
   "categories": [
     "Programming Languages"
@@ -33,7 +39,7 @@
     "commands": [
         {
             "command": "sakura-script.exportJSON",
-            "title": "Sakura: Exportar guion a JSON"
+            "title": "Sakura: Export script to JSON"
         }
     ],
     "menus": {

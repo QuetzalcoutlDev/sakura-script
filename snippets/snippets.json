@@ -1,55 +1,55 @@
 {
-  "Nueva rama": {
+  "New branch": {
     "prefix": "label",
     "body": [
-      "label ${1:Nombre}:",
+      "label ${1:name}:",
       "    $0"
     ],
-    "description": "Crea una nueva rama de diálogo"
+    "description": "Creates a new dialog branch"
   },
-  "Finalizar dialogo": {
+  "End dialog": {
     "prefix": "end",
     "body": [
       "$ end()"
     ],
-    "description": "Finaliza la ejecución del dialogo"
+    "description": "Ends the dialog execution"
   },
-  "Saltar a otra rama": {
+  "Jump to another branch": {
     "prefix": "jump",
     "body": [
       "$ jump(\"${1:label_name}\")"
     ],
-    "description": "Inserta un comando de variable"
+    "description": "Jump to another branch"
   },
-  "Bloque de Opciones": {
+  "Options Block": {
     "prefix": "option",
     "body": [
       "option:",
-      "    \"${1:Nombre de la opción}\":",
+      "    \"${1:Option name}\":",
       "        \"$0\""
     ],
-    "description": "Crea un menú de opciones"
+    "description": "Creates an options menu"
   },
-  "Condicional if": {
+  "If condition": {
     "prefix": "if",
     "body": [
-      "if ${1:variable} == ${2:valor}:",
+      "if ${1:variable} == ${2:value}:",
       "    $0"
     ],
-    "description": "Crea un bloque condicional"
+    "description": "Creates a conditional block"
   },
-  "Cambiar Variable": {
+  "Change Variable": {
     "prefix": "set",
     "body": [
-      "$ set_variable(\"${1:variable}\", ${2:valor})"
+      "$ set_variable(\"${1:variable}\", ${2:value})"
     ],
-    "description": "Modifica el valor de una variable de juego"
+    "description": "Modifies the value of a game variable"
   },
-  "Insertar Personaje": {
+  "Insert Character": {
     "prefix": "[",
     "body": [
-      "[${1:Personaje}] \"$0\""
+      "[${1:Character}] \"$0\""
     ],
-    "description": "Inserta un personaje y abre comillas para el diálogo"
+    "description": "Inserts a character and opens quotes for the dialog"
   }
 }
