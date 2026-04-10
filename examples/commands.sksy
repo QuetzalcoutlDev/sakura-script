@@ -1,0 +1,33 @@
+// Desde hace rato llevamos viendo el $ end()
+// Eso se llama comando
+// Los comandos son acciones para mostrar, eliminar, o hacer una cosa dentro de tu juego
+// Estos empiezan por $ y a veces piden algo llamado "parametros" que son valores que puedes
+// Después usar en tu juego o algo que el sistema internamente necesita
+
+// Existen 3 comandos internos por ahora, end, jump y set_variable
+
+label Start:
+    [Nami] "Prueba de comandos."
+
+    // Esto buscara una variable llamada "Test" y cambiara su valor
+    $ set_variable("Test", 30)
+    
+    option:
+        "Ir a label Test?":
+            // Esto te saltara al label Test
+            $ jump("Test")
+        "No, quedarse en Start":
+            // Esto es una palabra especial, util para evitar errores porque el bloque esta vacio
+            pass
+
+    // Se usa siempre para terminar el dialogo, es recomendado que este al final de tu label siempre
+    $ end()
+
+label Test:
+    "Haz llegado al label Test."
+
+    // También puedes crear tus propios comandos, show_nami deberia mostrar al sprite Nami en el
+    // proyecto de prueba
+    $ show_nami()
+
+    $ end()

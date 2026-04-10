@@ -50,6 +50,8 @@ export function scriptParser(script){
         let current_label = ""; // Label actual (Para saber donde colocar las lineas)
         let label_index = 0; // Permite saber que nombre de label usar
 
+        let comment_regex = /\/\/(.*)/;
+
         let last_line_type = ""; // if, else, else if, option, para poder obtener los bloques de cada una
 
         let line_regex = /^(\s+)(.*)/ // Obtener cualquier tipo de linea
@@ -76,8 +78,8 @@ export function scriptParser(script){
                 continue; // Saltar a una linea que no sea label
             }
 
-            // Si la primera linea es un espacio vacio, saltarla
-            if(lines[i] == ""){
+            // Si la primera linea es un espacio vacio o un comentario, saltarla
+            if(lines[i] == "" || lines[i].match(comment_regex)){
                 continue;
             }
 
@@ -241,17 +243,6 @@ export function scriptParser(script){
                     }) ;
 
                 }
-                else if(first_char === "/"){
-                    // Obtener todo el comentario
-                    let comment_regex = current_line[2].match(/\/\/(.*)/);
-
-                    // Guardar el comentario (Intente hacer que se eliminara, pero no pude)
-                    current_block.push({
-                        "type": "comment",
-                        "line": comment_regex[1]
-                    });
-
-                }
                 // Linea especial "pass"
                 else if(first_char === "p"){
                     current_block.push({
@@ -277,8 +268,6 @@ export function scriptParser(script){
                             .map(param => param.replaceAll('"', ""))
                     });
                 }
-
-                // console.log("result_json = ", JSON.stringify(result_json, null, 2));
             }
         }
     }
@@ -287,5 +276,4 @@ export function scriptParser(script){
     
     // Obtener el JSON parseado
     return JSON.stringify(result_json, null, 2);
-
 }

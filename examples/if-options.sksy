@@ -1,0 +1,39 @@
+
+// La variable debe estar dentro del motor de juego
+// En este caso, en tu proyecto de GDevelop la variable debe estar en tus
+// variables de escena o globales
+
+// No te preocupes por la calidad de la mini historia
+
+label Start:
+    [Nami] "Hola."
+    [Nami] "¿Cuantas manzanas hay?"
+    // Condiciones estilo Python, para facilitar la lectura
+    // Un bloque condicional siempre se debe iniciar mediante if
+    // Si hay 20 manzanas
+    if apple == 20:
+        [Nami] "Hay 20 manzanas"
+    // En cambio si hay 30 manzanas
+    elif apple == 30:
+        [Nami] "Hay 30 manzanas"
+    // Si no hay manzanas o si hay más de 30
+    else:
+        [Nami] "Hay demasiadas manzanas, no puedo contarlas todas"
+    // No es necesario escribir elif y else, puedes solo usar if
+    "..."
+    [Nami] "Tantas manzanas me dieron hambre, pero no quiero comer manzanas."
+    [Nami] "Quisiera comer un buen ramen o quizás algo más ligero como un sandwich."
+    [Nami] "¿Qué deberia comer?"
+    // El bloque de option, se usa para dar interactibilidad y un dialogo menos lineal (Diferentes rutas)
+    option:
+        "Ramen":
+            // Ruta ramen
+            "Mejor un ramen, es realmente delicioso."
+        "Sandwich":
+            // Ruta sandwich
+            "Un buen sandwich la verdad que es realmente delicioso."
+        
+    // Al terminar el dialogo que escogiste, se sale del bloque option
+    
+    // Terminar ejecución de dialogo
+    $ end()

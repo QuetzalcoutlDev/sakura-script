@@ -1,0 +1,17 @@
+
+// Ejemplo basico de un script para decir solo "Hello World"
+
+// Todo dialogo está encerrado dentro de ""
+// El nombre del personaje hablante se encierra en []
+// No importa si no usas los [], automaticamente se toma en cuenta como que ninguno esta hablando
+// Puede servir para dialogos internos del personaje o para el narrador
+
+// las lineas que empiezan con doble /, se llaman comentarios, se ignoran por defecto, pero son perfectas
+// para anotarte cosas de utilidad
+
+label Start:
+    [Nami] "Hello world"
+    [Nami] "This is Sakura Script"
+
+    // Terminar ejecución de dialogo
+    $ end()
