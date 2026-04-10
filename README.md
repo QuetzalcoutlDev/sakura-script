@@ -1,5 +1,4 @@
 [license]: https://github.com/QuetzalcoutlDev/sakura-script/blob/master/LICENSE
-[twitter]: https://x.com/DazzleDevTeam
 
 <!-- Badges del README --->
 
@@ -58,3 +57,9 @@ This language is quite simple to understand, but I have prepared a brief guide t
 ![mit_license](/img/license_mit.png)
 
 This extension is under the MIT License.
+
+### Follow me
+
+Follow me on [X](https://x.com/DazzleDevTeam)
+
+Buy me a coffee on [ko-fi](https://ko-fi.com/quetzalcoutl)

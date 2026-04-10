@@ -3,7 +3,11 @@
   "displayName": "Sakura Script",
   "description": "Add Sakura Script support to VS Code",
   "version": "0.1.0",
-  "icon": "./img/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuetzalcoutlDev/sakura-script.git"
+  },
+  "icon": "/img/icon.png",
   "engines": {
     "vscode": "^1.115.0"
   },
