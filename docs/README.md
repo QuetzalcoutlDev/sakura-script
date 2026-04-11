@@ -1,148 +1,143 @@
-# Guia de inicio 💡
+# Getting Started Guide 💡
 
-Está guia está diseñada para entender rapidamente los conceptos de Sakura Script.
+This guide is designed to help you quickly understand the concepts of Sakura Script.
 
-Como ya estas aqui, debes saber que necesitas tener instalado Visual Studio Code en tu PC.
+Since you're already here, you should know that you need to have Visual Studio Code installed on your PC.
 
-Descarga la extensión Sakura Script desde [aca]() o puedes instalarla desde la tienda de extensiones de Visual Studio Code.
+Download the Sakura Script extension from [here](https://github.com/QuetzalcoutlDev/sakura-script/releases/).
 
-- Para GDevelop:
-    - Debes instalar la extensión Sakura Dialog System en tu proyecto [descargala aqui]() o puedes instalarla desde la tienda de extensiones de GDevelop
-    - Puedes leer la doc de Sakura Dialog System para GDevelop haciendo [clic aca]()
+Install the extension by going to the "Extensions" menu, clicking on the ellipsis (...), and selecting "Install from VSIX".
 
-Puedes leer ejemplos desde [aca](https://github.com/QuetzalcoutlDev/sakura-script/blob/master/examples)
+- For GDevelop:
+    - You must install the Sakura Dialog System extension in your project [download it here](https://github.com/QuetzalcoutlDev/SakuraDialogSystemGD/releases/)
+    - You can read the Sakura Dialog System documentation for GDevelop by clicking [here](https://github.com/QuetzalcoutlDev/SakuraDialogSystemGD/tree/master/docs)
+
+You can read examples [here](https://github.com/QuetzalcoutlDev/sakura-script/blob/master/examples).
 
 ---
 
-## Creación de un dialogo
+## Creating a Dialogue
 
-Cuando tengas todo listo, es momento de saber como escribir un dialogo
+Once you have everything ready, it's time to learn how to write a dialogue.
 
 ```js
 label Start:
-    "Hola mundo!"
+
+"Hello world!"
 ```
 
-Cada dialogo se escribe dentro de una rama que debe empezar por el nombre especial "label", una rama no es más que un contenedor de tu historia.
+Each dialogue is written within a branch that must begin with the special name "label." A branch is simply a container for your story.
 
-Con label, seguido le sigue un nombre, "Start" puede ser el label de inicio, pero no es necesario que sea "Start", puede ser el que quieras, pero siempre evita no repetir nombres.
+After "label," a name follows. "Start" can be the starting label, but it doesn't have to be "Start"—you can use any name you want, but always avoid repeating names.
 
 ```js
 label Start:
-    [Nami] "Hola mundo!"
+
+[Nami] "Hello world!"
 ```
 
-Aqui agregamos esto [Nami], en Sakura Script, los [], contienen el nombre del personaje hablante, util para dejar claro quien esta hablando.
+Here we add [Nami]. In SakuraScript, the brackets [], contain the name of the speaking character, useful for making it clear who is speaking.
 
-Si no se coloca [], entonces se tomara como que no hay nadie hablando, puedes usar eso para el narrador o los pensamientos internos del protagonista.
+If the brackets [], are not used, then it will be assumed that no one is speaking. You can use this for the narrator or the protagonist's internal thoughts.
 
-Los dialogos pueden ser todos los que quieras, pero siempre deben estar encerrados en "".
+The dialogues can be as many as you want, but they must always be enclosed in quotation marks.
 
+## Commands
 
-## Comandos
+Commands are actions that must be performed immediately after or before a line of dialogue.
 
-Los comandos son acciones que se deben realizar justo después o antes de una linea de dialogo.
-
-Como mostrar un personaje o cambiar a otra escena.
+For example, showing a character or switching to another scene.
 
 ```js
 label Start:
-    [Nami] "Hola mundo!"
-
-    // Los comandos empiezan por $
+    [Nami] "Hello world!"
+    // Commands start with $
     $ show_nami()
 ```
 
-Puedes crear los tuyos propios y crear cuantos parametros necesites
+You can create your own and add as many parameters as you need.
 
 ```js
 label Start:
-    [Nami] "Hola mundo!"
-
-    // Los comandos empiezan por $
+    [Nami] "Hello world!"
     $ show_nami(100, 0.5, "linear")
 ```
 
-Por defecto, existen por ahora solo 3 comandos, end, jump y set_variable()
+By default, there are currently only 3 commands: end, jump, and set_variable().
 
-Vease [ejemplos de comandos](https://github.com/QuetzalcoutlDev/sakura-script/blob/master/examples/commands.sksy)
+See [command examples](https://github.com/QuetzalcoutlDev/sakura-script/blob/master/examples/commands.sksy)
 
-## Condicionales
+## Conditionals
 
-Las condicionales no son más que bloques especiales que permiten mostrar dialogos si se cumple una condición (Valga la redundancia).
+Conditionals are simply special blocks that allow you to display dialogs if a condition is met (redundancy intended).
 
-Se usan variables para dichas condiciones, las variables no son más que contenedores de datos que pueden cambiar (Numeros, textos, etc)
+Variables are used for these conditions; variables are simply containers for data that can change (numbers, text, etc.).
 
 ```js
 label Start:
-    [Nami] "Hola!"
-    [Nami] "¿Cuantas manzanas habrá en esta mesa?"
-    // Los bloques condicionales siempre empiezan por if
-    // Se buscara una variable llamada apples 
+    [Nami] "Hello!"
+    [Nami] "How many apples are on this table?"
+    // Conditional blocks always begin with if
+    // We will look for a variable called apples
     if apples == 20:
-        [Nami] "Wow, hay 20 manzanas"
-    
-    [Nami] "Quiero 3 manzanas."
+        [Nami] "Wow, there are 20 apples"
+    [Nami] "I want 3 apples."
 ```
 
-Si la variable apples es 20, entonces se mostrara el dialogo dentro del bloque.
+If the variable apples is 20, then the dialog inside the block will be displayed.
 
 > [!NOTE]
-> Las condicionales por ahora solo aceptan un nombre fijo, o sea, no puede ser fruits.apples o fruits[0]
-> Debe ser solo una variable sin hijos.
-> Y siempre debe haber por ahora un == o cualquier operador, después del nombre de la variable.
+> Conditional statements currently only accept a fixed name; that is, it cannot be fruits.apples or fruits[0].
+> It must be a single variable without children, and there must always be a == or any other comparison operator after the variable name.
 
-Comparación variable con variable
-
+Comparing variables with each other:
 ```js
 label Start:
-    [Nami] "Hola!"
-
-    // También puedes comparar 2 variables entre si
+    [Nami] "Hello!"
+    // You can also compare two variables
     if Test == Test_2:
         "..."
 ```
 
-## Opciones
+## Options
 
-Las opciones no son más que rutas que una forma de dar interración y menos linealidad a tu historia.
+Options are simply paths that add interaction and less linearity to your story.
 
 ```js
 label Start:
-    [Nami] "Hola!"
-    [Nami] "¿Que comere ahora?"
-    // Las opciones, se crean usando la palabra especial "option"
+    [Nami] "Hello!"
+    [Nami] "What should I eat now?"
+    // Options are created using the special word "option"
     option:
-        // Todas las opciones se encierran usando "", pero se diferencian de los dialogos porque llevan 
-        // un : al final
+        // All options are enclosed in quotation marks, but they differ from dialogue because they have a colon at the end.
         "Ramen":
-            "Un delicioso ramen, que bien!"
+            "Delicious ramen, how nice!"
         "Sandwich":
-            "Un sandwich simple, pero delicioso!"
+            "A simple but delicious sandwich!"
+    [Nami] "Yummy~"
 
-    [Nami] "Que rico~"
 ```
 
 > [!NOTE]
-> Puedes usar bloques condicionales (if-elif-else) dentro de bloques option y viceversa.
+> You can use conditional blocks (if-elif-else) inside option blocks and vice versa.
 
 ---
 
-# Ultimos detalles
+# Final Details
 
-Eso es todo, ya debes saber como usar lo basico de Sakura Script, este lenguaje ira creciendo poco a poco, pero se puede usar igualmente.
+That's it! You should now know how to use the basics of Sakura Script. This language will grow little by little, but you can still use it.
 
-## Como uso Sakura Script en GDevelop?
+## How do I use Sakura Script in GDevelop?
 
-Simple, sigue los primeros pasos, pero hay un problema.
+Simple, follow the first steps, but there's a problem.
 
-El formato .sksy no es posible hacer que GDevelop lo lea.
+The .sksy format cannot be read by GDevelop.
 
-Por lo que hay que hacer esto.
+So you have to do this:
 
-Desde tu script .sksy en VS Code, haz clic derecho y te aparecerá la opción "Export script to JSON"
+From your .sksy script in VS Code, right-click and the option "Export script to JSON" will appear.
 ![export](/img/export.png)
 
-Al hacer clic, te aparecera una ventana para donde quieras exportar el JSON del script.
+When you click, a window will appear where you can choose to export the script's JSON.
 
-En tu carpeta de assets proyecto de GDevelop, puedes guardarlo.
+You can save it in your GDevelop project's assets folder, making it easier to use.

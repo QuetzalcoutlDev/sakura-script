@@ -1,0 +1,23 @@
+{
+  "labels": {
+    "Start": [
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "Hello world"
+      },
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "This is Sakura Script"
+      },
+      {
+        "type": "command",
+        "line": "end",
+        "params": [
+          ""
+        ]
+      }
+    ]
+  }
+}

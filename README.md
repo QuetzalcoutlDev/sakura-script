@@ -10,7 +10,7 @@
 <p align="center">
   <img src="./img/icon.png">
 </p>
-<h2 align = "center"> Sakura Script Extension for VS Code</h2>
+<h2 align = "center"> Sakura Script Extension for Visual Studio Code</h2>
 <h6 align = "center"> 🗨️ Adds support for Sakura Script for Visual Studio Code</h6>
 
 ![version-badge]  [![license-badge]][license] [![kofi-badge]](https://ko-fi.com/quetzalcoutl)
@@ -46,7 +46,7 @@ Currently, Sakura Script can only be used within GDevelop via the Sakura Dialog 
 
 However, I plan to expand its support in the future to include Godot—and even Unity, should I see significant demand for it.
 
-The name "Sakura" simply appealed to me, and the character featured in the logo is a succubus named "Kammi Sakura."
+*The name "Sakura" simply appealed to me, and the character featured in the logo is a succubus named "Kammi Sakura."*
 
 ## Getting Started💡
 
@@ -58,8 +58,7 @@ This language is quite simple to understand, but I have prepared a brief guide t
 
 This extension is under the MIT License.
 
-### Follow me
+## Follow me
 
-Follow me on [X](https://x.com/DazzleDevTeam)
-
-Buy me a coffee on [ko-fi](https://ko-fi.com/quetzalcoutl)
+* Follow me on [X](https://x.com/DazzleDevTeam)
+* Buy me a coffee on [ko-fi](https://ko-fi.com/quetzalcoutl)

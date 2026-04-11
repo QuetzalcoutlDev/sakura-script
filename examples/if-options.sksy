@@ -11,10 +11,10 @@ label Start:
     // Condiciones estilo Python, para facilitar la lectura
     // Un bloque condicional siempre se debe iniciar mediante if
     // Si hay 20 manzanas
-    if apple == 20:
+    if apples == 20:
         [Nami] "Hay 20 manzanas"
     // En cambio si hay 30 manzanas
-    elif apple == 30:
+    elif apples == 30:
         [Nami] "Hay 30 manzanas"
     // Si no hay manzanas o si hay más de 30
     else:

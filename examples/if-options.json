@@ -1,0 +1,102 @@
+{
+  "labels": {
+    "Start": [
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "Hola."
+      },
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "¿Cuantas manzanas hay?"
+      },
+      {
+        "type": "conditional",
+        "conditions": {
+          "if": {
+            "condition": "apples == 20",
+            "block": [
+              {
+                "type": "dialogue",
+                "who": "Nami",
+                "line": "Hay 20 manzanas"
+              }
+            ]
+          },
+          "elif_0": {
+            "condition": "apples == 30",
+            "block": [
+              {
+                "type": "dialogue",
+                "who": "Nami",
+                "line": "Hay 30 manzanas"
+              }
+            ]
+          },
+          "else": {
+            "block": [
+              {
+                "type": "dialogue",
+                "who": "Nami",
+                "line": "Hay demasiadas manzanas, no puedo contarlas todas"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "dialogue",
+        "who": "",
+        "line": "..."
+      },
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "Tantas manzanas me dieron hambre, pero no quiero comer manzanas."
+      },
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "Quisiera comer un buen ramen o quizás algo más ligero como un sandwich."
+      },
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "¿Qué deberia comer?"
+      },
+      {
+        "type": "options",
+        "choices": [
+          {
+            "text": "Ramen",
+            "block": [
+              {
+                "type": "dialogue",
+                "who": "",
+                "line": "Mejor un ramen, es realmente delicioso."
+              }
+            ]
+          },
+          {
+            "text": "Sandwich",
+            "block": [
+              {
+                "type": "dialogue",
+                "who": "",
+                "line": "Un buen sandwich la verdad que es realmente delicioso."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "command",
+        "line": "end",
+        "params": [
+          ""
+        ]
+      }
+    ]
+  }
+}

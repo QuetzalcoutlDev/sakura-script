@@ -1,0 +1,73 @@
+{
+  "labels": {
+    "Start": [
+      {
+        "type": "dialogue",
+        "who": "Nami",
+        "line": "Prueba de comandos."
+      },
+      {
+        "type": "command",
+        "line": "set_variable",
+        "params": [
+          "Test",
+          "30"
+        ]
+      },
+      {
+        "type": "options",
+        "choices": [
+          {
+            "text": "Ir a label Test?",
+            "block": [
+              {
+                "type": "command",
+                "line": "jump",
+                "params": [
+                  "Test"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "No, quedarse en Start",
+            "block": [
+              {
+                "type": "pass"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "command",
+        "line": "end",
+        "params": [
+          ""
+        ]
+      }
+    ],
+    "Test": [
+      {
+        "type": "dialogue",
+        "who": "",
+        "line": "Haz llegado al label Test."
+      },
+      {
+        "type": "command",
+        "line": "show_nami",
+        "params": [
+          ""
+        ]
+      },
+      {
+        "type": "command",
+        "line": "end",
+        "params": [
+          ""
+        ]
+      }
+    ],
+    "siempre": []
+  }
+}
