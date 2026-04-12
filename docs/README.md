@@ -6,7 +6,9 @@ Since you're already here, you should know that you need to have Visual Studio C
 
 Download the Sakura Script extension from [here](https://github.com/QuetzalcoutlDev/sakura-script/releases/).
 
-Install the extension by going to the "Extensions" menu, clicking on the ellipsis (...), and selecting "Install from VSIX".
+Install the extension by going to the "Extensions" menu, clicking on the ellipsis (...), and selecting "Install from VSIX" 
+
+Or you can download the extension from the Visual Studio Code extension marketplace.
 
 - For GDevelop:
     - You must install the Sakura Dialog System extension in your project [download it here](https://github.com/QuetzalcoutlDev/SakuraDialogSystemGD/releases/)

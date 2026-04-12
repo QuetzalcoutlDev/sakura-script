@@ -3,6 +3,7 @@
   "displayName": "Sakura Script",
   "description": "Add Sakura Script support to VS Code",
   "version": "0.1.0",
+  "publisher": "quetzalcoutldev",
   "repository": {
     "type": "git",
     "url": "https://github.com/QuetzalcoutlDev/sakura-script.git"
@@ -15,7 +16,6 @@
     "package": "vsce package",
     "publish": "vsce publish"
   },
-
   "type": "module",
   "categories": [
     "Programming Languages"
