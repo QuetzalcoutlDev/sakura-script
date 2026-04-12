@@ -8,7 +8,7 @@ Download the Sakura Script extension from [here](https://github.com/Quetzalcoutl
 
 Install the extension by going to the "Extensions" menu, clicking on the ellipsis (...), and selecting "Install from VSIX" 
 
-Or you can download the extension from the Visual Studio Code extension marketplace.
+Or you can download the extension from the Visual Studio Code Marketplace.
 
 - For GDevelop:
     - You must install the Sakura Dialog System extension in your project [download it here](https://github.com/QuetzalcoutlDev/SakuraDialogSystemGD/releases/)
@@ -24,8 +24,7 @@ Once you have everything ready, it's time to learn how to write a dialogue.
 
 ```js
 label Start:
-
-"Hello world!"
+    "Hello world!"
 ```
 
 Each dialogue is written within a branch that must begin with the special name "label." A branch is simply a container for your story.
@@ -34,8 +33,7 @@ After "label," a name follows. "Start" can be the starting label, but it doesn't
 
 ```js
 label Start:
-
-[Nami] "Hello world!"
+    [Nami] "Hello world!"
 ```
 
 Here we add [Nami]. In SakuraScript, the brackets [], contain the name of the speaking character, useful for making it clear who is speaking.
@@ -43,6 +41,10 @@ Here we add [Nami]. In SakuraScript, the brackets [], contain the name of the sp
 If the brackets [], are not used, then it will be assumed that no one is speaking. You can use this for the narrator or the protagonist's internal thoughts.
 
 The dialogues can be as many as you want, but they must always be enclosed in quotation marks.
+
+> [!NOTE]
+> Every line of dialogue is written within a block, in this case "label," which must contain four spaces at the beginning.
+> Pressing the TAB key once allows you to do this.
 
 ## Commands
 
@@ -65,7 +67,7 @@ label Start:
     $ show_nami(100, 0.5, "linear")
 ```
 
-By default, there are currently only 3 commands: end, jump, and set_variable().
+By default, there are currently only 3 commands: end, jump, and set_variable.
 
 See [command examples](https://github.com/QuetzalcoutlDev/sakura-script/blob/master/examples/commands.sksy)
 
