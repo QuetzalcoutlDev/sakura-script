@@ -226,7 +226,7 @@ export function scriptParser(script){
                     /// Logica de dialogo
 
                     // Obtener el nombre encerrado en los []
-                    let who_regex = current_line[2].match(/^\[([^\]]+)\]/);
+                    let who_regex = current_line[2].match(/^\[(.*?)\]\s*(?=")/);
 
                     let who = who_regex != null ? who_regex[1] : "" ;
                     //console.log("who = ", who);
